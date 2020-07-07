@@ -7,7 +7,7 @@ function App() {
 	const [recipes, setRecipes] = useState([]);
 	const [alert, setAlert] = useState('');
 
-	return <div></div>;
+	return <div>Mike Foods</div>;
 }
 
 export default App;
