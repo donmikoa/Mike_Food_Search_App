@@ -12,9 +12,15 @@ function App() {
 
 	const url = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`;
 
+	const getData = async () => {
+		const result = await Axios.get(url);
+
+		console.log(result);
+	};
+
 	return (
 		<div className='App'>
-			<h1>Mike Food Search</h1>
+			<h1 onClick={getData}>Mike Food Search</h1>
 			<form className='search-form'>
 				<input
 					type='text'
