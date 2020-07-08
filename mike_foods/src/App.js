@@ -10,7 +10,7 @@ function App() {
 	const APP_ID = 'f659709c';
 	const APP_KEY = 'd95fc3252840382a96c07bd438e73183';
 
-	const url = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`;
+	const url = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
 	const getData = async () => {
 		const result = await Axios.get(url);
@@ -32,6 +32,8 @@ function App() {
 				<input type='submit' value='Search' />
 			</form>
 			<div>The Recipies</div>
+
+      
 		</div>
 	);
 }
