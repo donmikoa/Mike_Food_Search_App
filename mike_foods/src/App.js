@@ -10,13 +10,18 @@ function App() {
 	const APP_ID = 'f659709c';
 	const APP_KEY = 'd95fc3252840382a96c07bd438e73183';
 
-	const url = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`;
+	const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
 	const getData = async () => {
 		const result = await Axios.get(url);
 
 		console.log(result);
-	};
+  };
+  
+
+  const onChange = (e) => {
+    setQuery(e.target.value);
+  }
 
 	return (
 		<div className='App'>
@@ -25,7 +30,8 @@ function App() {
 				<input
 					type='text'
 					name='query'
-					value=''
+          value={query}
+          onChange= {onChange}
 					autoComplete='off'
 					placeholder='Search Food'
 				/>
